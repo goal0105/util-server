@@ -3,6 +3,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const bodyParser = require('body-parser');
 
 const app = express();
+const PORT = 80;
 
 app.get('/hello-world', (req, res) => {
     res.send('hello world');
@@ -49,8 +50,6 @@ app.get('/video-ratio', (req, res) => {
     }
 });
 
-
-const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
