@@ -9,10 +9,11 @@ app.get('/hello-world', (req, res) => {
     res.send('hello world');
 });
 
-
+ffmpeg.setFfmpegPath("C:/ffmpeg/bin/ffmpeg.exe"); 
 
 // Middleware to parse JSON body
 app.use(bodyParser.json());
+
 
 // POST API to get video aspect ratio (width / height)
 app.get('/video-ratio', (req, res) => {
